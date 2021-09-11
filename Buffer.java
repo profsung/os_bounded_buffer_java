@@ -14,8 +14,9 @@ public class Buffer {
 
 	public synchronized void insert(int data) {
 		try {
-			while (count == BUFFER_SIZE)
+			while (count == BUFFER_SIZE) {
 				wait(); // wait
+			}
 
 			buffer[putIndex] = data;
 			putIndex = ++putIndex % BUFFER_SIZE;
@@ -32,6 +33,7 @@ public class Buffer {
 			while (count == 0) {
 				wait();
 			}
+
 			int value = buffer[getIndex];
 			getIndex = ++getIndex % BUFFER_SIZE;
 			--count;
