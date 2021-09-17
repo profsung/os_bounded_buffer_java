@@ -2,7 +2,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		if (args.length != 1) {
-			System.out.println("Usage: java RaceMain loop_count");
+			System.out.println("Usage: java Main loop_count");
 			System.exit(1);
 		}
 

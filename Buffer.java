@@ -1,6 +1,7 @@
 import java.util.Random;
 
 public class Buffer {
+
 	private final int BUFFER_SIZE;
 	private int[] buffer;
 	private int getIndex = 0;
